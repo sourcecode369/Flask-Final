@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <div class="container">
+            {% if current_user.is_authenticated %}
+            <h3 class="display-4">
+                Hi {{current_user.username}}.!
+                <br>Welcome to your homepage.
+            </h3>
+            {% else %}
+            <h3 class="display-4"> Please Login or Register first. </h3>
+            <div class="card-body">
+                <h5 class="card-title">
+                    Welcome to the Flask Web Application.
+                </h5>
+                <p class="card-text">
+                        This website is a demostration of how we can
+                    combine databases and view in the Flask and Python. Plus since
+                    Python is probably the coolest language of all time so it viva vandetta
+                    to use it as the web application framework for complete development.
+                    <strong>
+                        Because I love Python.
+                    </strong>
+                </p>
+                <a href="http://flask.palletsprojects.com/en/1.1.x/" class="btn btn-primary">
+                    Goto Flask Homepage
+                </a>
+              </div>
+  <div class="container">
+    <img src="https://i0.wp.com/sourcedexter.com/wp-content/uploads/2017/09/flask-python.png?fit=640%2C400&ssl=1" width="100%"/>
+  </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

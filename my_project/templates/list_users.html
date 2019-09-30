@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+    {% block content %}
+        <div class="jumbotron">
+            <h1> Here is a list of all registered users. </h1>
+            <ol>
+                <!--<% for u in users: %>
+                    <li><strong>{{ u }}</strong></li>
+                <% endfr %>-->
+                {{users}}
+            </ol>
+        </div>
+
+    {% endblock %}

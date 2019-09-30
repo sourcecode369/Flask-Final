@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="display-4">You can upload and download here.</h3>
+        <br><br>
+        <form action = "/success" method = "post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <input type = "submit" value="Upload">
+        </form>
+        <br>
+        {% if file: %}
+            {% for f in file: %}
+        <h6>{{f}} </h6> <br>
+            {% endfor %}
+        {% endif %}
+        </br>
+    </div>
+{% endblock %}
